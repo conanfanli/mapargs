@@ -36,7 +36,7 @@ setup(
     author_email="conanlics@gmail.com",
     license="MIT",
     # use entry_points if exporting scripts
-    # entry_points={
-    #     "console_scripts": ["mapargs=some_module:main"],
-    # },
+    entry_points={
+        "console_scripts": ["mapargs=mapargs.command_line:main"],
+    },
 )
