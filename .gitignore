@@ -1,0 +1,15 @@
+.idea
+node_modules
+*.log
+tags
+.venv/
+__pycache__
+db.sqlite3
+.ropeproject
+dist/
+.env
+# staticfiles
+.mypy_cache/
+.awcache/
+.cache/
+.pytest_cache/

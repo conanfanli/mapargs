@@ -1,0 +1,2 @@
+#!/bin/sh
+m2r README.md --overwrite

@@ -1,0 +1,10 @@
+include *requirements.txt
+include *.md
+
+include mapargs/*.pyi
+recursive-include mapargs *.pyi
+
+include mapargs/py.typed
+recursive-include mapargs py.typed
+
+
