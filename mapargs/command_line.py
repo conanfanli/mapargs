@@ -26,10 +26,14 @@ def parse_command_line() -> CommandLineOptions:
     return CommandLineOptions(infile=options.infile)
 
 
-if __name__ == "__main__":
+def main() -> None:
     options = parse_command_line()
     lines = [line.strip() for line in options.infile.readlines() if line]
     for line in lines:
         field = REGEX.sub("", line)
         # Map python objects
         print(f"{field}=right.{field},")
+
+
+if __name__ == "__main__":
+    main()
