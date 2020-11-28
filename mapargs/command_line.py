@@ -14,7 +14,7 @@ class CommandLineOptions:
 
 
 def get_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(prog="mapargs")
     parser.add_argument("infile", type=argparse.FileType("r"), default=sys.stdin)
     return parser
 

@@ -1,7 +1,8 @@
 # mapargs
-Add docs here
+Generate boilerplate that maps arguments.
 
-[//]: # (rendermd.shell.start`python -m mapargs.command_line --help`)
+
+[//]: # (start:shell`python -m mapargs.command_line --help`)
 usage: command_line.py [-h] infile
 
 positional arguments:
@@ -9,4 +10,4 @@ positional arguments:
 
 optional arguments:
   -h, --help  show this help message and exit
-[//]: # (rendermd.end)
+[//]: # (end)
