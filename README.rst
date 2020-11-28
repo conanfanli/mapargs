@@ -4,7 +4,7 @@ mapargs
 
 Generate boilerplate that maps arguments.
 
-usage: command_line.py [-h] infile
+usage: mapargs [-h] infile
 
 positional arguments:
   infile
