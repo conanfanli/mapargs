@@ -2,7 +2,7 @@
 mapargs
 =======
 
-Add docs here
+Generate boilerplate that maps arguments.
 
 usage: command_line.py [-h] infile
 
