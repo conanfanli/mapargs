@@ -35,6 +35,7 @@ c: float
 [//]: # (end)
 
 Output:
+
 [//]: # (start:shell`python -m mapargs.command_line docs/python_example_infile.txt`)
 ```
 field1=source.field1,
@@ -62,6 +63,7 @@ c: float
 [//]: # (end)
 
 Output:
+
 [//]: # (start:shell`python -m mapargs.command_line docs/go_example_infile.txt`)
 ```
 ID: source.ID,
