@@ -24,4 +24,12 @@ Read input from command line:
    b: int
    c: float
 
-   Ctrl-D
+   <Ctrl-D>
+
+Output:
+
+.. code-block::
+
+   field1=source.field1,
+   b=source.b,
+   c=source.c,

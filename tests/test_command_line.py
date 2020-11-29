@@ -19,9 +19,9 @@ c: float
     def test_generate_go_code(self) -> None:
         infile = io.StringIO(
             """
-ID            int            `json:"id"`
-Field2    string         `json:"issued_date"`
-c   string         `json:"total_amount"`
+ID        int
+Field2    string
+c         string
 """
         )
         output = list(generate_code(infile))

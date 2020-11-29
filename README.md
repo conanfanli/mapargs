@@ -16,22 +16,57 @@ optional arguments:
 
 ## Examples
 
+### Python
+
 Read input from command line:
+
 ```
 mapargs -
+```
+End input by pressing <Ctrl-d>.
+
+[//]: # (start:shell`cat docs/python_example_infile.txt`)
+```
 field1: str
 b: int
 c: float
-
-<Ctrl-D>
 ```
 
+[//]: # (end)
+
 Output:
-[//]: # (start:shell`python -m mapargs.command_line docs/example_infile.txt`)
+[//]: # (start:shell`python -m mapargs.command_line docs/python_example_infile.txt`)
 ```
 field1=source.field1,
 b=source.b,
 c=source.c,
+```
+
+[//]: # (end)
+
+### Go
+
+Read input from command line:
+```
+mapargs -
+```
+End input by pressing <Ctrl-d>.
+
+[//]: # (start:shell`cat docs/python_example_infile.txt`)
+```
+field1: str
+b: int
+c: float
+```
+
+[//]: # (end)
+
+Output:
+[//]: # (start:shell`python -m mapargs.command_line docs/go_example_infile.txt`)
+```
+ID: source.ID,
+Field2: source.Field2,
+c: source.c,
 ```
 
 [//]: # (end)
