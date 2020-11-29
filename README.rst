@@ -1,6 +1,3 @@
-.. role:: raw-html-m2r(raw)
-   :format: html
-
 
 Usage
 =====
@@ -27,8 +24,6 @@ Read input from command line:
 
    mapargs -
 
-End input by pressing :raw-html-m2r:`<Ctrl-d>`.
-
 .. code-block::
 
    field1: str
@@ -52,13 +47,15 @@ Read input from command line:
 
    mapargs -
 
-End input by pressing :raw-html-m2r:`<Ctrl-d>`.
+Press ``<Ctrl-d>`` to end input.
 
 .. code-block::
 
    field1: str
    b: int
    c: float
+
+Press ``<Ctrl-d>`` to end input.
 
 Output:
 
