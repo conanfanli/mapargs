@@ -1,12 +1,9 @@
 
-mapargs
-=======
-
-Generate boilerplate that maps arguments.
+Usage
+=====
 
 .. code-block::
 
-   [//]: # (start:shell`python -m mapargs.command_line --help`)
    usage: mapargs [-h] infile
 
    positional arguments:
@@ -15,4 +12,16 @@ Generate boilerplate that maps arguments.
    optional arguments:
      -h, --help  show this help message and exit
 
-   [//]: # (end)
+Examples
+--------
+
+Read input from command line:
+
+.. code-block::
+
+   mapargs -
+   field1: str
+   b: int
+   c: float
+
+   Ctrl-D
