@@ -8,10 +8,21 @@ class CommandLineTest(unittest.TestCase):
     def test_generate_python_code(self) -> None:
         infile = io.StringIO(
             """
-a: str
+field1: str
 b: int
 c: float
 """
         )
         output = list(generate_code(infile))
-        assert output == ["a=right.a,", "b=right.b,", "c=right.c,"]
+        assert output == ["field1=source.field1,", "b=source.b,", "c=source.c,"]
+
+    def test_generate_go_code(self) -> None:
+        infile = io.StringIO(
+            """
+ID            int            `json:"id"`
+Field2    string         `json:"issued_date"`
+c   string         `json:"total_amount"`
+"""
+        )
+        output = list(generate_code(infile))
+        assert output == ["ID: source.ID,", "Field2: source.Field2,", "c: source.c,"]

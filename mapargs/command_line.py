@@ -5,8 +5,9 @@ import re
 import sys
 from typing import Iterator
 
-SEPARATORs = [":", " "]
-REGEX = re.compile(rf"({'|'.join(SEPARATORs)}).*")
+PYTHON = re.compile(r"(\w+):.*")
+
+GO = re.compile(r"(\w+) +.*")
 
 
 @dataclass
@@ -30,10 +31,12 @@ def parse_command_line() -> CommandLineOptions:
 def generate_code(infile: io.TextIOWrapper) -> Iterator[str]:
     lines = [line.strip() for line in infile.readlines() if line]
     for line in lines:
-        field = REGEX.sub("", line)
-        if field:
-            # Map python objects
-            yield (f"{field}=right.{field},")
+        if (matched := PYTHON.match(line)) :
+            field = matched.group(1)
+            yield (f"{field}=source.{field},")
+        elif (matched := GO.match(line)) :
+            field = matched.group(1)
+            yield (f"{field}: source.{field},")
 
 
 def main() -> None:
