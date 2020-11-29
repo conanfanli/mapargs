@@ -23,6 +23,7 @@ jobs:
         pip install -r dev-requirements.txt
 
   publish:
+    runs-on: ubuntu-latest
     needs: build
     steps:
     - name: publish to PYPI
