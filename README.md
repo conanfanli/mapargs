@@ -23,7 +23,6 @@ Read input from command line:
 ```
 mapargs -
 ```
-End input by pressing <Ctrl-d>.
 
 [//]: # (start:shell`cat docs/python_example_infile.txt`)
 ```
@@ -51,7 +50,7 @@ Read input from command line:
 ```
 mapargs -
 ```
-End input by pressing <Ctrl-d>.
+Press `<Ctrl-d>` to end input.
 
 [//]: # (start:shell`cat docs/python_example_infile.txt`)
 ```
@@ -61,6 +60,7 @@ c: float
 ```
 
 [//]: # (end)
+Press `<Ctrl-d>` to end input.
 
 Output:
 
