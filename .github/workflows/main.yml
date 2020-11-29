@@ -23,8 +23,9 @@ jobs:
         pip install -r dev-requirements.txt
 
   publish:
-    - name: Publish package to PyPI
-      needs: build
+    needs: build
+    steps:
+    - name: publish to PYPI
       if: ${{ github.ref == 'refs/heads/master' }}
       env:
         PYPI_TOKEN: ${{ secrets.pypi_token }}

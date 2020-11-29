@@ -1,3 +1,6 @@
+.. role:: raw-html-m2r(raw)
+   :format: html
+
 
 Usage
 =====
@@ -15,16 +18,22 @@ Usage
 Examples
 --------
 
+Python
+^^^^^^
+
 Read input from command line:
 
 .. code-block::
 
    mapargs -
+
+End input by pressing :raw-html-m2r:`<Ctrl-d>`.
+
+.. code-block::
+
    field1: str
    b: int
    c: float
-
-   <Ctrl-D>
 
 Output:
 
@@ -33,3 +42,28 @@ Output:
    field1=source.field1,
    b=source.b,
    c=source.c,
+
+Go
+^^
+
+Read input from command line:
+
+.. code-block::
+
+   mapargs -
+
+End input by pressing :raw-html-m2r:`<Ctrl-d>`.
+
+.. code-block::
+
+   field1: str
+   b: int
+   c: float
+
+Output:
+
+.. code-block::
+
+   ID: source.ID,
+   Field2: source.Field2,
+   c: source.c,
