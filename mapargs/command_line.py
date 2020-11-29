@@ -3,6 +3,7 @@ from dataclasses import dataclass
 import io
 import re
 import sys
+from typing import Iterator
 
 SEPARATORs = [":", " "]
 REGEX = re.compile(rf"({'|'.join(SEPARATORs)}).*")
@@ -26,13 +27,19 @@ def parse_command_line() -> CommandLineOptions:
     return CommandLineOptions(infile=options.infile)
 
 
-def main() -> None:
-    options = parse_command_line()
-    lines = [line.strip() for line in options.infile.readlines() if line]
+def generate_code(infile: io.TextIOWrapper) -> Iterator[str]:
+    lines = [line.strip() for line in infile.readlines() if line]
     for line in lines:
         field = REGEX.sub("", line)
-        # Map python objects
-        print(f"{field}=right.{field},")
+        if field:
+            # Map python objects
+            yield (f"{field}=right.{field},")
+
+
+def main() -> None:
+    options = parse_command_line()
+    for line in generate_code(options.infile):
+        print(line)
 
 
 if __name__ == "__main__":

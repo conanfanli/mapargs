@@ -6,6 +6,7 @@ Generate boilerplate that maps arguments.
 
 .. code-block::
 
+   [//]: # (start:shell`python -m mapargs.command_line --help`)
    usage: mapargs [-h] infile
 
    positional arguments:
@@ -13,3 +14,5 @@ Generate boilerplate that maps arguments.
 
    optional arguments:
      -h, --help  show this help message and exit
+
+   [//]: # (end)
