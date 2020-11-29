@@ -1,0 +1,3 @@
+field1: str
+b: int
+c: float
