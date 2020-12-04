@@ -72,3 +72,21 @@ c: source.c,
 ```
 
 [//]: # (end)
+
+
+# Use with vim
+
+Put these lines in your .vimrc file.
+```
+nnoremap mm :call MapArgs('"')<CR>
+function! MapArgs(r)
+  let result = system("mapargs -", getreg(a:r, 1))
+  put =result
+endfunction
+```
+
+Yank(copy) the lines that only contain the fields and then press `mm` (key binding can be
+changed to anything you like).
+
+![](./docs/demo.gif)
+
